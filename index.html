@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>school registration and login page</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/bootstrap.min.css"/>
@@ -41,7 +41,9 @@ and open the template in the editor.
                             </div>
                             <div class="row form_sign_in_content">
                                 <div class="col-lg">
-                                    <form>
+
+                                <!--registration form-->
+                                    <form method="POST" action="php/registration.php">
                                         <div class="form_item container-fluid">
                                             <div class="row">
                                                 <div class="col-lg">
@@ -54,7 +56,7 @@ and open the template in the editor.
                                                                 <img src="image/user.png"/>
                                                             </span>
                                                         </div>
-                                                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                                        <input type="text" class="form-control" placeholder="Firstname" aria-label="Username" aria-describedby="basic-addon1" name="fname">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg">
@@ -67,7 +69,7 @@ and open the template in the editor.
                                                                 <img src="image/user.png"/>
                                                             </span>
                                                         </div>
-                                                        <input type="text" class="form-control" placeholder="lastname" aria-label="Username" aria-describedby="basic-addon1">
+                                                        <input type="text" class="form-control" placeholder="lastname" aria-label="Username" aria-describedby="basic-addon1" name="lname">
                                                     </div>
                                                 </div>
                                             </div>
@@ -84,7 +86,7 @@ and open the template in the editor.
                                                                 <img src="image/mail.png"/>
                                                             </span>
                                                         </div>
-                                                        <input type="email" class="form-control" placeholder="Enter your adress e-mail" aria-label="Username" aria-describedby="basic-addon1">
+                                                        <input type="email" class="form-control" placeholder="Enter your adress e-mail" aria-label="Username" aria-describedby="basic-addon1" name="email">
                                                     </div>
                                                 </div>
                                             </div>
@@ -101,7 +103,7 @@ and open the template in the editor.
                                                                 <img src="image/home.png"/>
                                                             </span>
                                                         </div>
-                                                         <textarea style="width: 100%" placeholder="Enter your Home adress">
+                                                         <textarea style="width: 100%" placeholder="Enter your Home adress" name="address">
                                                              
                                                          </textarea>   
                                                      </div>
@@ -120,7 +122,7 @@ and open the template in the editor.
                                                                 <img src="image/user.png"/>
                                                             </span>
                                                         </div>
-                                                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="username">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg">
@@ -133,7 +135,7 @@ and open the template in the editor.
                                                                 <img src="image/lock.png"/>
                                                             </span>
                                                         </div>
-                                                        <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+                                                        <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1" name="password">
                                                     </div>
                                                 </div>
                                             </div>
@@ -150,7 +152,7 @@ and open the template in the editor.
                                                                 <img src="image/lock.png"/>
                                                             </span>
                                                         </div>
-                                                        <input type="password" class="form-control" placeholder="Verif your password" aria-label="Username" aria-describedby="basic-addon1">
+                                                        <input type="password" class="form-control" placeholder="Verif your password" aria-label="Username" aria-describedby="basic-addon1" name="password2">
                                                     </div>
                                                 </div>
                                             </div>
@@ -167,7 +169,7 @@ and open the template in the editor.
                                                                 <img src="image/birthday.png"/>
                                                             </span>
                                                         </div>
-                                                        <input type="date" placeholder="Enter your birthdau date">
+                                                        <input type="date" placeholder="Enter your birthdau date" name="birthday">
                                                     </div>
                                                 </div>
                                                 <div class="col-lg">
@@ -180,7 +182,7 @@ and open the template in the editor.
                                                                 <img src="image/birthday.png"/>
                                                             </span>
                                                         </div>
-                                                        <input type="number" placeholder="Enter your age">
+                                                        <input type="number" placeholder="Enter your age" name="age">
                                                     </div>
                                                 </div>
                                             </div>
@@ -189,12 +191,12 @@ and open the template in the editor.
                                         <div class="form_item container-fluid">
                                             <div class="row justify-content-center">
                                                 <div class="col-lg-7">
-                                                    <input class="btn btn-primary" type="button" value="Submit" style="
+                                                    <input class="btn btn-primary" type="submit" value="Submit" style="
                                                            width: 150px;
                                                            display: inline-block;
                                                            height: 50px;
                                                            font-weight: bold
-                                                           "/>
+                                                           " name="submit"/>
                                                     <input class="btn btn-danger" type="reset" value="Reset" style="
                                                            width: 150px;
                                                            display: inline-block;
@@ -209,7 +211,13 @@ and open the template in the editor.
                             </div>
                             <div class="row form_log_in_content">
                                 <div class="col-lg">
-                                    <form>
+
+
+
+
+
+                                <!--login page-->
+                                    <form method="POST" action="login.php">
                                         <div class="form_item container-fluid">
                                             <div class="row">
                                                 <div class="col-lg">
